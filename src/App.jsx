@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
+import PitchVisualizer from './PitchVisualizer';
 
 const fontThemes = [
   { id: 'classic', name: 'Classic' },
@@ -575,6 +576,44 @@ const VoiceWork = () => {
             </p>
           </div>
         )}
+      </section>
+
+      {/* Voice Visualizer Section */}
+      <section style={{
+        padding: 'clamp(3rem, 10vw, 6rem) clamp(1.5rem, 5vw, 4rem)',
+        maxWidth: '700px',
+        margin: '0 auto'
+      }}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h3 style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: '0.875rem',
+            letterSpacing: '0.25em',
+            textTransform: 'uppercase',
+            color: 'var(--accent)',
+            marginBottom: '0.75rem'
+          }}>
+            Try It Now
+          </h3>
+          <h2 className="font-heading" style={{
+            fontSize: 'clamp(1.5rem, 4vw, 2rem)',
+            marginBottom: '1rem'
+          }}>
+            See Your Voice
+          </h2>
+          <p style={{
+            fontSize: '1.125rem',
+            color: 'rgba(var(--text-rgb), 0.7)',
+            fontStyle: 'italic',
+            maxWidth: '500px',
+            margin: '0 auto'
+          }}>
+            Use your microphone to visualize your voice in real time.
+            Hum a note and watch it appear.
+          </p>
+        </div>
+
+        <PitchVisualizer />
       </section>
 
       {/* Modules Section */}
